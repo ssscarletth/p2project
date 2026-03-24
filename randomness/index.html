@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>small sites, big stories</title>
+    <link rel="stylesheet" href="../css/randomness.css"> 
+</head>
+
+<body>
+    <div class="lamp">
+        <div class="head">
+        <div class="innerbulb"></div>
+        <div class="pull" onclick="turnOn()">
+        <div class="pull1"></div>
+        <div class="pull2"></div>
+        </div>
+        </div>
+        <div class="stem"></div>
+        <div class="base"></div>
+    </div>
+    <div class="light"></div>
+
+</body>
+
+<script>
+    let lamplight = document.querySelector('.innerbulb');
+    let ambientlight = document.querySelector('.light');
+    let pull = document.querySelector('.pull')
+
+    function getRoundedRandomNumber(min, max) {
+        let range = max-min;
+        return Math.floor(Math.random() * range) + min;
+    }
+
+    function turnOn() {
+        let r = getRoundedRandomNumber(120, 240);
+        let g = getRoundedRandomNumber(90, 200);
+        let b = getRoundedRandomNumber(120, 255);
+
+        lamplight.style.backgroundColor ="rgba(" + r + "," + g + "," + b + ", 0.5)";
+    
+
+        ambientlight.style.background ="radial-gradient(circle, rgba(" + r + "," + g + "," + b + ", 0.08) 0%, rgba(" + r + "," + g + "," + b + ", 0.04) 43%, transparent 70%)";
+        ambientlight.style.opacity = "1";
+}
+    
+
+    
+</script>
+
+</html>
