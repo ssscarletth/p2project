@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+pre {
+    font-family: monospace;
+    white-space: pre;
+}
+
+body {
+    display: flex;
+    justify-content: flex-start;  
+    align-items: flex-end;  
+    height: 100vh;
+    padding-left: 200px;
+    padding-bottom: 170px;
+    background: linear-gradient(to bottom,#f2f2f2 0%,#f2f2f2 50%,#dff3f5 59%,#7aced3 68%,#7aced3 71%,white 80%,#ffc280 82%,#ffc280 88%,#f2f2f2 100%);
+    background-size: 100% 130%;
+    animation: wave 3s ease-in-out infinite alternate;
+
+}
+
+@keyframes wave {
+    from {
+        background-position: 0% 100%;
+    }
+    to {
+        background-position: 0% 85%;
+    }
+}

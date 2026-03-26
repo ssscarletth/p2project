@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time</title>
+    <link rel="stylesheet" href="../css/time.css"> 
+</head>
+
+<body>
+    <pre id="scene">
+                                  |>>>
+                                  |
+                    |>>>      _  _|_  _         |>>>
+                    |        |;| |;| |;|        |
+                _  _|_  _    \\.    .  /    _  _|_  _
+               |;|_|;|_|;|    \\:. ,  /    |;|_|;|_|;|
+               \\..      /    ||;   . |    \\.    .  /
+                \\.  ,  /     ||:  .  |     \\:  .  /
+                 ||:   |_   _ ||_ . _ | _   _||:   |
+                 ||:  .|||_|;|_|;|_|;|_|;|_|;||:.  |
+                 ||:   ||.    .     .      . ||:  .|
+                 ||: . || .     . .   .  ,   ||:   |       
+                 ||:   ||:  ,  _______   .   ||: , |            
+                 ||:   || .   /+++++++\    . ||:   |
+                 ||:   ||.    |+++++++| .    ||: . |
+              __ ||: . ||: ,  |+++++++|.  . _||_   |
+     ____--`~    '--~~__|.    |+++++__|----~    ~`---,              ___
+-~--~                   ~---__|,--~'                  ~~----_____-~'   `~----~~
+
+    </pre>
+
+<script>
+    let scene = document.querySelector('#scene');
+    let originalcastle = scene.textContent;
+    let lines = originalcastle.split('\n');
+    let erosion = 0;
+    function erodeCastle() {
+        erosion += 2;
+
+    let total = lines.length;
+    let remaining = lines.slice(0, total - erosion);
+
+    scene.textContent = remaining.join('\n');
+}
+
+    setTimeout(function() {
+        erodeCastle();
+        setInterval(erodeCastle, 6000);
+    }, 2500);
+
+
+</script>
+
+</body>
+
+</html>

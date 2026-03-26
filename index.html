@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            background-color: rgb(249, 249, 246);
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .topics {
+            display: flex;
+            gap: 60px;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .item {
+            transition: filter 1.5s ease;
+        }
+        
+        .item:hover {
+            color: #265d07;
+            filter: blur(4px);
+            transition: filter 5s ease;
+        }
+
+    </style>
+
 </head>
+
 <body>
-    <a href="randomness/index.html">Go to my lamp project</a>
+    <div class="topics">
+    <a href="randomness/index.html" class="link"><div class="item">randomness</div></a>
+    <a href="time/index.html" class="link"><div class="item">time</div></a>
+    <a href="interaction/index.html" class="link"><div class="item">interaction</div></a>
+    <a href="loop/index.html" class="link"><div class="item">loop</div></a>
+</div>
+
 </body>
 </html>
