@@ -35,6 +35,7 @@
     let originalcastle = scene.textContent;
     let lines = originalcastle.split('\n');
     let erosion = 0;
+    let interval;
     function erodeCastle() {
         erosion += 2;
 
@@ -42,11 +43,14 @@
     let remaining = lines.slice(0, total - erosion);
 
     scene.textContent = remaining.join('\n');
+    if (erosion >= total) {
+        clearInterval(interval);
+    }
 }
 
     setTimeout(function() {
         erodeCastle();
-        setInterval(erodeCastle, 6000);
+        interval = setInterval(erodeCastle, 6000);
     }, 2500);
 
 
