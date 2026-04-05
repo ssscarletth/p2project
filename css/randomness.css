@@ -4,6 +4,27 @@
     box-sizing: border-box;
 }
 
+.homepage-link {
+    position: fixed;
+    bottom: 10px;
+    left: 18px;
+    width: 100px;  
+    height: 100px;
+}
+
+.house {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    bottom: 10px;
+}
+
+.homepage-link:hover img {
+    filter: brightness(1.2); 
+    transform: scale(1.05);  
+    transition: all 0.3s ease;
+}
+
 body {
     min-height: 100vh;
     background: linear-gradient(rgb(3, 20, 26),rgb(2, 1, 15));
