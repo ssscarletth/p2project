@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/interaction.css"> 
+</head>
+<body>
+    <div id="group">
+        <div id="shape1" class="shape"></div>
+        <div id="shape2" class="shape"></div>
+        <div id="shape3" class="shape"></div>
+        <div id="shape4" class="shape"></div>
+        <div id="shape5" class="shape"></div>
+        <div id="shape6" class="shape"></div>
+    </div>
+
+    <script>
+        let s1=document.querySelector('#shape1');
+        let s2=document.querySelector('#shape2');
+        let s3=document.querySelector('#shape3');
+        let s4=document.querySelector('#shape4');
+        let s5=document.querySelector('#shape5');
+        let s6=document.querySelector('#shape6');   
+
+        s2.addEventListener('mouseenter',function() {
+            s1.style.transform = 'translateX(-30px)';
+            s3.style.transform = 'translateX(30px) ';
+            s4.style.transform = 'translateX(30px)';
+            s5.style.transform = 'translateX(30px)';
+            s6.style.transform = 'translateX(30px)';
+        })
+        s2.addEventListener('mouseleave',function() {
+            s1.style.transform = 'translateX(0)';
+            s3.style.transform = 'translateX(0) rotate(45deg)';
+            s4.style.transform = 'translateX(0)';
+            s5.style.transform = 'translateX(0)rotate(45deg)';
+            s6.style.transform = 'translateX(0)';
+        })
+
+        s3.addEventListener('mouseenter',function() {
+            s1.style.transform = 'translateX(-30px)';
+            s2.style.transform = 'translateX(-30px) rotate(45deg)';
+            s4.style.transform = 'translateX(30px)';
+            s5.style.transform = 'translateX(30px) rotate(45deg)';
+            s6.style.transform = 'translateX(30px) rotate(-30deg)';
+        })
+        s3.addEventListener('mouseleave',function() {
+            s1.style.transform = 'translateX(0)';
+            s2.style.transform = 'translateX(0) ';
+            s4.style.transform = 'translateX(0)';
+            s5.style.transform = 'translateX(0)rotate(45deg)';
+            s6.style.transform = 'translateX(0)';
+        })
+
+        s4.addEventListener('mouseenter',function() {
+            s1.style.transform = 'translateX(-30px)';
+            s2.style.transform = 'translateX(-30px)';
+            s3.style.transform = 'translateX(-30px) rotate(90deg)';
+            s5.style.transform = 'translateX(30px) rotate(90deg)';
+            s6.style.transform = 'translateX(30px) ';
+        })
+        s4.addEventListener('mouseleave',function() {
+            s1.style.transform = 'translateX(0)';
+            s2.style.transform = 'translateX(0) ';
+            s3.style.transform = 'translateX(0) rotate(45deg)';
+            s5.style.transform = 'translateX(0)rotate(45deg)';
+            s6.style.transform = 'translateX(0)';
+        })
+
+        s5.addEventListener('mouseenter',function() {
+            s1.style.transform = 'translateX(-30px)';
+            s2.style.transform = 'translateX(-30px) rotate(45deg)';
+            s3.style.transform = 'translateX(-30px) rotate(45deg)';
+            s4.style.transform = 'translateX(-30px)';
+            s6.style.transform = 'translateX(30px) rotate(30deg)';
+        })
+        s5.addEventListener('mouseleave',function() {
+            s1.style.transform = 'translateX(0)';
+            s2.style.transform = 'translateX(0) ';
+            s3.style.transform = 'translateX(0) rotate(45deg)';
+            s4.style.transform = 'translateX(0) ';
+            s6.style.transform = 'translateX(0)';
+        })
+
+        s1.addEventListener('mouseenter',function() {
+            s2.style.transform = 'translateX(30px) ';
+            s3.style.transform = 'translateX(30px) rotate(45deg)';
+            s4.style.transform = 'translateX(30px)rotate(90deg)';
+            s5.style.transform = 'translateX(30px) rotate(90deg)';
+            s6.style.transform = 'translateX(30px) rotate()';
+        })
+        s1.addEventListener('mouseleave',function() {
+            s2.style.transform = 'translateX(0) ';
+            s3.style.transform = 'translateX(0) rotate(45deg)';
+            s4.style.transform = 'translateX(0) ';
+            s5.style.transform = 'translateX(0)rotate(45deg)';
+            s6.style.transform = 'translateX(0)';
+        })
+
+        s6.addEventListener('mouseenter',function() {
+            s1.style.transform = 'translateX(-30px)';
+            s2.style.transform = 'translateX(-30px) rotate(45deg)';
+            s3.style.transform = 'translateX(-30px) rotate(45deg)';
+            s4.style.transform = 'translateX(-30px) rotate(-45deg)';
+            s5.style.transform = 'translateX(-30px) rotate(30deg)';
+        })
+        s6.addEventListener('mouseleave',function() {
+            s1.style.transform = 'translateX(0)';
+            s2.style.transform = 'translateX(0) ';
+            s3.style.transform = 'translateX(0) rotate(45deg)';
+            s4.style.transform = 'translateX(0) '; 
+            s5.style.transform = 'translateX(0)rotate(45deg)';
+        })
+    </script>
+</body>
+</html>
