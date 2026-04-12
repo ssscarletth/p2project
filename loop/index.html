@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/loop.css"> 
+</head>
+<body>
+    <a href="../index.html" class="homepage-link">
+        <img src="../asset/homepage1-light.png" class="house">   
+    </a>
+
+    <div id="palette">
+        <div class="stripegroup"></div>
+        <div class="stripegroup"></div>
+        <div class="stripegroup"></div>
+    </div>
+
+    <script>
+        let allGroups = document.querySelectorAll('.stripegroup');
+
+        allGroups.forEach(function(item) {
+            for (let i=0; i<5; i++) {
+                let stripe = document.createElement('div');
+                stripe.classList.add('stripe');
+                item.appendChild(stripe);
+            }
+        })
+
+        function changes(){
+            let widths = [];
+            let colors = [];
+
+            for (let i=0; i<5; i++) {
+                let width = Math.floor(Math.random() * 100) + 20;
+                widths.push(width + 'px');
+
+
+                let r = Math.floor(Math.random() * 255);
+                let g = Math.floor(Math.random() * 255);
+                let b = Math.floor(Math.random() * 255);
+                colors.push('rgb(' + r + ',' + g + ',' + b + ')');
+                }
+            
+
+            allGroups.forEach(function(item){
+                let stripes = item.querySelectorAll('.stripe');
+                stripes.forEach(function(item, i) {
+                    item.style.width = widths[i];
+                    item.style.backgroundColor = colors[i];
+                })
+            })
+        }
+
+        setInterval(changes, 2000);
+
+        changes();
+
+    </script>
+</body>
+</html>
