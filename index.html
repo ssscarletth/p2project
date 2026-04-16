@@ -38,16 +38,68 @@
             transition: filter s ease;
         }
 
+        .title {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            display: flex;
+            flex-direction: row; 
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(249, 249, 246);
+            white-space: nowrap;
+        }
+
+        .word span {
+            display: inline-block;
+            padding: 0 5px;
+            margin: 0 2px;
+            animation: wave 4s ease-in-out infinite;
+        }
+        
+
+        @keyframes wave {
+            0% { transform: translateY(0); filter: blur(0px);}
+            30% { transform: translateY(-10px); filter: blur(5px) }
+            60% { transform: translateY(-10px); filter: blur(0px);}
+            100% { transform: translateY(0); }
+        }
+
     </style>
 
 </head>
 
 <body>
     <div class="topics">
-    <a href="randomness/index.html" class="link"><div class="item">randomness</div></a>
-    <a href="time/index.html" class="link"><div class="item">time</div></a>
-    <a href="interaction/index.html" class="link"><div class="item">interaction</div></a>
-    <a href="loop/index.html" class="link"><div class="item">loop</div></a>
+        <a href="randomness/index.html" class="link"><div class="item">randomness</div></a>
+        <a href="time/index.html" class="link"><div class="item">time</div></a>
+        <a href="interaction/index.html" class="link"><div class="item">interaction</div></a>
+        <a href="loop/index.html" class="link"><div class="item">loop</div></a>
+    </div>
+
+    <div class="title">
+        <div class="word"><span>S</span><span>m</span><span>a</span><span>l</span><span>l</span></div>
+        <div class="word"><span>S</span><span>i</span><span>t</span><span>e</span><span>s</span></div>
+        <div class="word"><span>B</span><span>i</span><span>g</span></div>
+        <div class="word"><span>S</span><span>t</span><span>o</span><span>r</span><span>i</span><span>e</span><span>s</span></div>
+    </div>
+
+    <script>
+        let allWords = document.querySelectorAll('.word');
+        let i=0;
+        allWords.forEach(function(item) {
+            let spans = item.querySelectorAll('span');
+            spans.forEach(function(span, i) {
+                span.style.animationDelay = (i*0.8) + 's';
+                i++;
+            });
+            
+        });
+    </script>
+
 </div>
 
 </body>
